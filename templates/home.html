@@ -1,19 +1,18 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
-
-{% block content %}
 {% if user.is_authenticated %}
 
-<div class="login-page">
-  <h2 class="text-center" style="">Hi {{ user.username }}!</h2>
-  <a class="text-center home-button btn" href="{% url 'logout' %}">logout</a>
-</div>
+    {% block header %}
+        {% include 'snippets/headers.html' %}
+    {% endblock header %}
+
+    {% block content %}
+        {% include 'snippets/consul-tree.html' %}
+        {% include 'snippets/footer.html' %}
+    {% endblock content %}
+
+<!--  <a class="text-center home-button btn" href="{% url 'logout' %}" >logout</a>-->
 {% else %}
-<div class="login-page">
-  <h2 class="text-center" style="">You are not logged in</h2>
-  <a class="text-center home-button btn" href="{% url 'login' %}">login</a>
-</div>
+    <meta http-equiv="refresh" content="0; URL='/accounts/login/'" />
 {% endif %}
-{% endblock %}
