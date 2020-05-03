@@ -1,0 +1,132 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+}
+
+body {
+    margin: 0 auto;
+    padding: 50px 10px;
+    font-size: 1.4em;
+}
+
+body > .container {
+    padding: 20px 15px 0;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+.padded-right-middle {
+    margin-right: 15px;
+}
+
+#ConsulTree {
+    overflow-x: auto;
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.page-header {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 40px 0 15px !important;
+}
+
+.jstree-container-ul {
+    margin-right: 15px !important;
+}
+
+.modal-header-danger {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-header-warning {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #f0ad4e;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-header-primary {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-header-info {
+     color:#fff;
+     padding:9px 15px;
+     border-bottom:1px solid #eee;
+     background-color: #5bc0de;
+     -webkit-border-top-left-radius: 5px;
+     -webkit-border-top-right-radius: 5px;
+     -moz-border-radius-topleft: 5px;
+     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+#searchClear {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer ;
+    color: #c0c0c0;
+}
+
+#pageFooter {
+    background-color: #3a3f46;
+    color: white;
+    flex: 0 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -10px;
+}
+
+#pageFooter a, #pageFooter p {
+    color: #d2d1d1;
+}
+
+#table-wrapper {
+    position:relative;
+}
+#table-scroll {
+    height:450px;
+    overflow:auto;
+}
+#table-wrapper table {
+    width:100%;
+}

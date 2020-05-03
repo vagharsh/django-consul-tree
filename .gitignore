@@ -3,6 +3,7 @@
 
 .idea/
 .vscode/
+/sent_emails
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

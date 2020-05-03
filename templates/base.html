@@ -1,14 +1,16 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+    <meta charset="utf-8">
+    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+    <link href="{%static 'favicon.png'%}" rel="shortcut icon" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 <body>
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+{% block content %}
+{% endblock %}
 </body>
 </html>
