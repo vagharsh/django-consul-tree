@@ -415,15 +415,16 @@ function getTree(tree, allKeys) {
         keyboard: false
     });
 
-    $.ajax({
-        method: "GET",
-        url: "backend/requests.php",
-        dataType: 'json',
-        data: {
-            method: "TREE",
-            consul: allKeys
-        }
-    }).done(function (data) {
+//    $.ajax({
+//        method: "GET",
+//        url: "backend/requests.php",
+//        dataType: 'json',
+//        data: {
+//            method: "TREE",
+//            consul: allKeys
+//        }
+//    }).done(function (data) {
+    $.getJSON('static/data.json', function (data) {
         $('#connectingModalId').modal('hide');
         if (data['data'] === '[]') {
             //console.log("No Data was found on Consul");

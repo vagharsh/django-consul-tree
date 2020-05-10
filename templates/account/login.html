@@ -1,0 +1,53 @@
+<!-- templates/login.html -->
+{% extends 'base.html' %}
+
+{% block header %}
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Consul-Tree{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'css/favicon.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+{% endblock header %}
+
+{% block content %}
+<div class="login-page">
+    <div class="form">
+        <div class="page-header">
+            <h3>Consul-Tree</h3>
+        </div>
+        <form class="login-form" action="" method="post">
+            {% csrf_token %}
+
+            {% for field in login_form %}
+                <p>
+                    {{field.label_tag}}
+                    {{field}}
+
+                    {% if field.help_text %}
+                        <small style="color: grey;">{{field.help_text}}</small>
+                    {% endif %}
+                </p>
+            {% endfor %}
+
+            {% for field in login_form %}
+                {% for error in field.errors %}
+                    <p style="color: red;">{{error}}</p>
+                {% endfor %}
+            {% endfor %}
+
+            {% if login_form.non_field_errors %}
+                    <div style="color: red;">
+                        <p>{{login_form.non_field_errors}}</p>
+                    </div>
+            {% endif %}
+            <button type="submit">Log in</button>
+        </form>
+
+        <br>
+        <h6 class="text-center" style="">Consul-tree {{ app_version }}</h6>
+    </div>
+</div>
+{% endblock %}

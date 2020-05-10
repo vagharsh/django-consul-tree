@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     convertMultipleSelectionTo1();
 
-    $.getJSON("config/config.json", function (consul) {
+    $.getJSON('static/config.json', function (consul) {
         if (consul) if (consul.length !== 0) {
             var selectedConsulJson, tree;
             setToLocalStorage('consulConfig', consul);
