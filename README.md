@@ -42,4 +42,4 @@ Please create an issue [here](https://github.com/vagharsh/django-consul-tree/iss
 
 Copyright and License
 ---------------------
-Copyright and License under the [MIT license](LICENSE).
+Copyright and License under the [Apache-2.0](LICENSE).
