@@ -20,10 +20,24 @@ def logout_view(request):
     return redirect('home')
 
 
+def check_auto_login(accounts):
+    for account in accounts:
+        if account.auto_login:
+            return account
+
+
 def login_view(request):
     context = {}
-
     user = request.user
+
+    # Check the DB if there is a user with auto_login field is true then it will login with that user
+    accounts = Account.objects.all()
+    auto_login_enabled_user = check_auto_login(accounts)
+
+    if auto_login_enabled_user:
+        login(request, auto_login_enabled_user)
+        return redirect('home')
+
     if user.is_authenticated:
         return redirect('home')
 
