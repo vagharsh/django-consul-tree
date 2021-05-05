@@ -19,7 +19,7 @@ Quick Start
 To use the Consul-tree you need Python and a web server.
 
 - Clone the repo into your web directory.
-- After you pull you should execute the following to update the DB 
+- After you pull you should execute the following to update the DB. 
 ```
 python manage.py migrate
 ```
